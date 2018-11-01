@@ -100,6 +100,7 @@
 				1FF0AFCF2176E56800D2EF26 /* Frameworks */,
 				1FF0AFD02176E56800D2EF26 /* Resources */,
 				6014F1F3118A832D68976073 /* [CP] Copy Pods Resources */,
+				B847E71A6582F5271A53FEAC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +180,30 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-googleMap/Pods-googleMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B847E71A6582F5271A53FEAC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-googleMap/Pods-googleMap-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-googleMap/Pods-googleMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C3B48DE294FC26BB6B899B46 /* [CP] Check Pods Manifest.lock */ = {
