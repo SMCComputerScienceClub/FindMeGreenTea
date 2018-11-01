@@ -19,7 +19,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
       
         
-        let camera = GMSCameraPosition.camera(withLatitude: 34.022268, longitude: -118.4751741, zoom: 6.0)
+        let camera = GMSCameraPosition.camera(withLatitude: 34.022268, longitude: -118.4751741, zoom: 12.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         view = mapView
         let marker = GMSMarker()
@@ -27,26 +27,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         marker.title = "Sydney"
         marker.snippet = "Australia"
         marker.map = mapView
+
         
         Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=34.022268,-118.4751741&radius=1500&type=restaurant&keyword=bar&key=AIzaSyCZhoUIdWNZcA3R7FR2CX8wcZnprAZLfaY").responseJSON { response in
-//            print("Request: \(String(describing: response.request))")   // original url request
-//            print("Response: \(String(describing: response.response))") // http url response
-//            print("Result: \(response.result)")                         // response serialization result
-            
-//            if let json = response.result.value {
-//                print("JSON: \(json)") // serialized json response
-//            }
-            
-            let json2 = JSON(response.result.value)
-            if let barName = json2["results"][0]["name"].string {
-                //Now you got your value
-                print(barName)
+            let json = JSON(response.result.value)
+            for i in 0..<json["results"].count {
+                let marker = GMSMarker()
+                let lat = json["results"][i]["geometry"]["location"]["lat"].double!
+                let lng = json["results"][i]["geometry"]["location"]["lng"].double!
+                marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+
+                
+                marker.title = json["results"][i]["name"].string
+                marker.snippet = "Rating: \(json["results"][i]["rating"].double!)"
+                marker.map = mapView
             }
-            
-//            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
-//                print("Data: \(utf8Text)") // original server data as UTF8 string
-//            }
         }
+        
         
 
     }
