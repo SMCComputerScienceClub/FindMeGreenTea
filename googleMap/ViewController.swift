@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import CoreLocation
+import SwiftyJSON
 import Alamofire
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
@@ -32,8 +33,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //            print("Response: \(String(describing: response.response))") // http url response
 //            print("Result: \(response.result)")                         // response serialization result
             
-            if let json = response.result.value {
-                print("JSON: \(json)") // serialized json response
+//            if let json = response.result.value {
+//                print("JSON: \(json)") // serialized json response
+//            }
+            
+            let json2 = JSON(response.result.value)
+            if let barName = json2["results"][0]["name"].string {
+                //Now you got your value
+                print(barName)
             }
             
 //            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
