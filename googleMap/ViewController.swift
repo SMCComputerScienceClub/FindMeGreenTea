@@ -33,22 +33,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
         let location = locations[locations.count - 1]
         if location.horizontalAccuracy > 0 {
+            
             print(location.coordinate)
             self.locationManger.stopUpdatingLocation()
             print("longitude = \(location.coordinate.longitude), latitude = \(location.coordinate.latitude)")
             long = location.coordinate.longitude
             lat = location.coordinate.latitude
             
+            print("lat \(lat) and long \(long)")
+            
             let camera = GMSCameraPosition.camera(withLatitude: lat, longitude: long, zoom: 12.0)
             let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
             view = mapView
             let marker = GMSMarker()
+            
             marker.position = CLLocationCoordinate2D(latitude: lat, longitude: long)
             marker.title = "Cuurent Location"
             marker.snippet = "lat \(lat) and long \(long)"
             marker.map = mapView
+            marker.icon = GMSMarker.markerImage(with: .green)
           
                 
             Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(long)&radius=1500&type=restaurant&keyword=bar&key=AIzaSyCZhoUIdWNZcA3R7FR2CX8wcZnprAZLfaY").responseJSON { response in
