@@ -47,5 +47,16 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UberClientID</key>
+    <string>H9ypEwephGDBnsVNXjHqMouQzbJvMVzS</string>
+    <key>UberServerToken</key>
+    <string>TxgFnqIQgV2k-GzhFUdoF3AMlCVzzypAyZJrxw0L</string>
+    <key>UberDisplayName</key>
+    <string>PubGo</string>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>uber</string>
+        <string>uberauth</string>
+    </array>
 </dict>
 </plist>
