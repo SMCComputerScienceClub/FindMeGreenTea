@@ -66,8 +66,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     let lat = json["results"][i]["geometry"]["location"]["lat"].double!
                     let lng = json["results"][i]["geometry"]["location"]["lng"].double!
                     marker.position = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-                            
-                            
+                    
+                    
                     marker.title = json["results"][i]["name"].string
                     marker.snippet = "Rating: \(json["results"][i]["rating"].double!)"
                     marker.map = mapView
