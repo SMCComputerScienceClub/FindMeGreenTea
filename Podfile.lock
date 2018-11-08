@@ -8,12 +8,16 @@ PODS:
   - GooglePlaces (2.7.0):
     - GoogleMaps/Base (= 2.7.0)
   - SwiftyJSON (4.2.0)
+  - UberCore (0.11.0)
+  - UberRides (0.11.0):
+    - UberCore
 
 DEPENDENCIES:
   - Alamofire
   - GoogleMaps
   - GooglePlaces
   - SwiftyJSON
+  - UberRides (~> 0.9)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -21,13 +25,17 @@ SPEC REPOS:
     - GoogleMaps
     - GooglePlaces
     - SwiftyJSON
+    - UberCore
+    - UberRides
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
   GooglePlaces: 3d06e6c99654545b4738ce49648745779c25f2ef
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  UberCore: b72013357bff720a30a1b12669e724750b775ef7
+  UberRides: d39c7c9f612d8f5ebfb69f475a553e1a54c3c4b5
 
-PODFILE CHECKSUM: 32dac2d124ad84390fc26951e709a99d0c52882a
+PODFILE CHECKSUM: 7d3bbd8c2172f0109c6ea3fab0befb4bf0dba7e9
 
 COCOAPODS: 1.5.3

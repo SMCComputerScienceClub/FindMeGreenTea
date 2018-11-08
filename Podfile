@@ -8,6 +8,7 @@ target 'googleMap' do
  pod 'GooglePlaces'
  pod 'Alamofire'
  pod 'SwiftyJSON'
+ pod 'UberRides', '~> 0.9'
 # Pods for googleMap
 
 end
