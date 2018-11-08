@@ -13,6 +13,7 @@
 		1FF0AFDD2176E56B00D2EF26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0AFDC2176E56B00D2EF26 /* Assets.xcassets */; };
 		1FF0AFE02176E56B00D2EF26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FF0AFDE2176E56B00D2EF26 /* LaunchScreen.storyboard */; };
 		533F64869F60BD126C88DF86 /* Pods_googleMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C7267E5281586FE5EEAD281 /* Pods_googleMap.framework */; };
+		8DD358472194D80700D613A5 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD358462194D80700D613A5 /* SplashScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		1FF0AFE12176E56B00D2EF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		584B0D4A8D9419C683BFE1C5 /* Pods-googleMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-googleMap/Pods-googleMap.release.xcconfig"; sourceTree = "<group>"; };
 		5C7267E5281586FE5EEAD281 /* Pods_googleMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD358462194D80700D613A5 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		FD292D84386B51209B12C6FD /* Pods-googleMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-googleMap/Pods-googleMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 				1FF0AFDC2176E56B00D2EF26 /* Assets.xcassets */,
 				1FF0AFDE2176E56B00D2EF26 /* LaunchScreen.storyboard */,
 				1FF0AFE12176E56B00D2EF26 /* Info.plist */,
+				8DD358462194D80700D613A5 /* SplashScreenViewController.swift */,
 			);
 			path = googleMap;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				1FF0AFD82176E56800D2EF26 /* ViewController.swift in Sources */,
 				1FF0AFD62176E56800D2EF26 /* AppDelegate.swift in Sources */,
+				8DD358472194D80700D613A5 /* SplashScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
