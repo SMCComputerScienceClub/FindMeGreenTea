@@ -19,9 +19,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var lat: Double = 34.0194
     var long : Double = -118.4912
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //If testing out on simulator Adjust GPS location by going to Simulator->Debug->Location and restart app
         
@@ -29,6 +29,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         locationManger.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManger.requestWhenInUseAuthorization()
         locationManger.startUpdatingLocation()
+        
     
     }
     
@@ -55,8 +56,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             marker.snippet = "lat \(lat) and long \(long)"
             marker.map = mapView
             marker.icon = GMSMarker.markerImage(with: .green)
-          
-                
+            
             Alamofire.request("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(lat),\(long)&radius=1500&type=restaurant&keyword=bar&key=AIzaSyCZhoUIdWNZcA3R7FR2CX8wcZnprAZLfaY").responseJSON { response in
                     let json = JSON(response.result.value)
                     print(json)
@@ -76,7 +76,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }
             
         }
-    
     //Write the didFailWithError method here:
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
